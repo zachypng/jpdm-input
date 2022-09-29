@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <title>DataInput</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <script>
+        let currentUser = "";
+
+        let companyURL = "https://airtable.com/embed/shrJ1nAWlD0MGO2xO"+"?prefill_Jensen%20Employee="+ currentUser +"&prefill_Comment=--%20PROSEK%20INPUT%20--";
+
+        let personURL = "https://airtable.com/embed/shr0aYWcjjNslZOpI"+"?prefill_Jensen%20Analyst="+ currentUser +"&prefill_Comment=--%20PROSEK%20INPUT%20--";
+
+        let positionURL = "https://airtable.com/embed/shrKONEdFfu1e97lQ"+"?prefill_Jensen%20Analyst="+ currentUser +"&prefill_Comment=--%20PROSEK%20INPUT%20--"
+
+        let moveURL = "https://airtable.com/embed/shrsxi6wjP5eqeFTO"+"?prefill_Jensen%20Analyst="+ currentUser +"&prefill_Comment=--%20PROSEK%20INPUT%20--"
+    </script>
+    <div class="userSelect">
+        <p>Select User: </p>
+        <select name="user" id="userSelect" onchange="setUser()">
+            <option value="Zach">Zach</option>
+            <option value="Sarah">Sarah</option>
+            <option value="Tallulah">Tallulah</option>
+        </select>
+    </div>
+    
+    <section class="container">
+        <div class="formContainer">
+            <iframe id="companyForm" class="airtable-embed" src="https://airtable.com/embed/shrJ1nAWlD0MGO2xO?prefill_Jensen%20Employee=Zach&prefill_Comment=--%20PROSEK%20INPUT%20--" frameborder="0" onmousewheel="" width="100%" height="100%" style="background: transparent; border: 1px solid #ccc;"></iframe>
+        </div>
+        <div class="formContainer">
+            <iframe id="personForm" class="airtable-embed" src="https://airtable.com/embed/shr0aYWcjjNslZOpI?prefill_Jensen%20Analyst=Zach&prefill_Comment=--%20PROSEK%20INPUT%20--" frameborder="0" onmousewheel="" width="100%" height="100%" style="background: transparent; border: 1px solid #ccc;"></iframe></div>
+        <div class="formContainer">
+            <iframe id="positionForm" class="airtable-embed" src="https://airtable.com/embed/shrKONEdFfu1e97lQ?prefill_Jensen%20Analyst=Zach&prefill_Comment=--%20PROSEK%20INPUT%20--" frameborder="0" onmousewheel="" width="100%" height="100%" style="background: transparent; border: 1px solid #ccc;"></iframe></div>
+        <div class="formContainer">
+            <iframe id="moveForm" class="airtable-embed" src="https://airtable.com/embed/shrsxi6wjP5eqeFTO?prefill_Jensen%20Analyst=Zach&prefill_Comment=--%20PROSEK%20INPUT%20--" frameborder="0" onmousewheel="" width="100%" height="100%" style="background: transparent; border: 1px solid #ccc;"></iframe>
+        </div>
+    </section>
+</body>
+
+<script>
+        let companyForm = document.getElementById('companyForm');
+        let personForm = document.getElementById('personForm');
+        let positionForm = document.getElementById('positionForm');
+        let moveForm = document.getElementById('moveForm');
+
+
+    function setUser() {
+        currentUser = document.getElementById('userSelect').value;
+        
+        let companyURL = "https://airtable.com/embed/shrJ1nAWlD0MGO2xO"+"?prefill_Jensen%20Employee="+ currentUser +"&prefill_Comment=--%20PROSEK%20INPUT%20--";
+
+        let personURL = "https://airtable.com/embed/shr0aYWcjjNslZOpI"+"?prefill_Jensen%20Analyst="+ currentUser +"&prefill_Comment=--%20PROSEK%20INPUT%20--";
+
+        let positionURL = "https://airtable.com/embed/shrKONEdFfu1e97lQ"+"?prefill_Jensen%20Analyst="+ currentUser +"&prefill_Comment=--%20PROSEK%20INPUT%20--"
+
+        let moveURL = "https://airtable.com/embed/shrsxi6wjP5eqeFTO"+"?prefill_Jensen%20Analyst="+ currentUser +"&prefill_Comment=--%20PROSEK%20INPUT%20--"
+
+        companyForm.src = companyURL;
+        personForm.src = personURL;
+        positionForm.src = positionURL;
+        moveForm.src = moveURL;
+
+    }
+
+</script>
+
+</html>
